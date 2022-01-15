@@ -14,3 +14,15 @@ body{
     background: #FAFFC1;
     
 }
+.card_students{
+    background-color:#F0F9FF ;
+}
+.card_course{
+    background-color:#FEF6FB ;
+}
+.card_payments{
+    background-color:#FEFBEC;
+}
+.card_users{
+    background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);
+}
