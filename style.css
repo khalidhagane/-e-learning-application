@@ -1,16 +1,17 @@
-
-
-
-.position {
+*{
+  padding: 0px;
+  margin: 0px;
+}
+.search{
     position: relative;
   }
-  .position-a {
+  .icon_search {
     position: absolute;
     right: 15px;
     top: 50%;
-    transform: translateY(-50%);
+    ransform: translateY(-50%);
   }
-  .position input {
+  .search input {
     padding-right: 50px;
   }
   .asied {
