@@ -8,8 +8,8 @@
   .icon_search {
     position: absolute;
     right: 15px;
-    top: 50%;
-    ransform: translateY(-50%);
+    top: 33%;
+    /* ransform: translateY(-50%); */
   }
   .search input {
     padding-right: 50px;
