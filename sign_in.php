@@ -14,7 +14,7 @@
 
 <body  >
     <main>
-<div class=" sign_in d-flex flex-row justify-content-center align-items-center " style="height: 100vh; background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);">
+<div class=" sign_in d-flex flex-row justify-content-center align-items-center min-vh-100 " style=" background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);">
     <form class="card p-3 d-flex flex-column  gap-3"  style="width: 23rem; border-radius: 15px;">
         <div>
             <h1 class="border-start border-4 border-info ps-2 fs-3">E-classe</h1>
@@ -26,18 +26,16 @@
         <div>
             <div class="mb-3">
                 <label for="exampleInputEmail1" class="form-label">Email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" 
-                    placeholder="Enter your email">
+                <input type="email" class="form-control"  placeholder="Enter your email">
             </div>
             <div class="mb-3">
                 <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1"
-                    placeholder="Enter your password">
+                <input type="password" class="form-control"  placeholder="Enter your password">
             </div>
             <div class="d-flex flex-column gap-3">
                 
                 <button type="submit" class="btn btn-info  w-100">
-                    <a href="home.html" class="text-white text-decoration-none"> SIGN IN </a>
+                    <a href="home.php" class="text-white text-decoration-none"> SIGN IN </a>
                 </button>
               
                 <p class="text-center text-secondary">Forgot your password? <a href="#" class="text-info"> Reset Password</a></p>

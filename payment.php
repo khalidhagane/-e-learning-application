@@ -20,90 +20,23 @@
 <main>
     <div class="container-fluid">
         <div class="row flex-nowrap">
-            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 asied  ">
-
-                <div class="d-flex flex-column  align-items-center px-4 pt-2 text-white min-vh-100  ">
-                    <div class="d-none d-sm-inline pb-sm-3 mb-md-1 me-md-auto text-black text-decoration-none">
-                        <span class=" fs-6 py-0 me-2"></span>
-                        <h3 class=" border-start border-4 border-info text-dark  ps-2   ">E-classe</h3>
-                    </div>
-                    <div class="d-flex flex-column align-items-center ">
-                        <img src="image/admin.png" alt="hugenerd" width="85" height="85"
-                            class="rounded-circle  mt-1">
-                        <h4 class="text-dark mt-3 h6"> <b> Admin name </b></h4>
-                        <p class="text-info">Admin</p>
-                    </div>
-
-                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start "
-                        id="menu" style="width: 100%;">
-                        <li class="nav-item mt-3 mb-sm-2 text-center" style="width: 100%;">
-                            <a href="home.html" class="nav-link  align-middle  text-dark">
-                                <i class="fal fa-home-lg-alt px-1 "></i> <span
-                                    class="ms-1 d-none d-sm-inline mt-4 ">Home</span>
-                            </a>
-                        </li>
-                        <li class="mb-sm-2 text-center" style="width: 100%;">
-                            <a href="#" data-bs-toggle="collapse" class="nav-link   align-middle text-dark">
-                                <i class="far fa-bookmark px-1  "></i> <span
-                                    class="ms-1 d-none d-sm-inline">Course</span> </a>
-                        </li>
-                        <li class="mb-sm-2 text-center" style="width: 100%;">
-                            <a href="student.html" class="nav-link align-middle text-dark">
-                                <i class="fal fa-graduation-cap "></i> <span
-                                    class="ms-1 d-none d-sm-inline">Students</span></a>
-                        </li>
-                        <li class=" mb-sm-2 text-center" style="width: 100%;">
-                            <a href="payment.html" data-bs-toggle="collapse"
-                                class="nav-link  align-middle text-dark ">
-                                <i class="far fa-usd-square "></i> <span
-                                    class="ms-1 d-none d-sm-inline">Payment</span></a>
-                        </li>
-                        <li class="mb-sm-2 text-center" style="width: 100%;">
-                            <a href="#" data-bs-toggle="collapse" class="nav-link bg align-middle text-dark ">
-                                <i class="fal fa-file-chart-line"></i> <span
-                                    class="ms-1 d-none d-sm-inline">Report</span></a>
-                        </li>
-                        <li class="mb-sm-3  text-center" style="width: 100%;">
-                            <a href="#" data-bs-toggle="collapse" class="nav-link  align-middle text-dark  ">
-                                <i class="fal fa-sliders-v-square "></i> <span
-                                    class="ms-1 d-none d-sm-inline">Settings</span></a>
-                        </li>
-
-                        <li class="mt-5 text-center" style="width: 100%;">
-                            <a href="index.html" class="nav-link mt-sm-5   text-dark">
-                                <span class="me-3 d-none d-sm-inline px-sm-1">Logout</span><i
-                                    class="fal fa-sign-out-alt fs-5 "></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+            <!-- asied -->
+            <?php include 'asied.php' ?>
+            <!-- asied -->
 
 
             <div class="col ">
 
-                <nav class="navbar">
-                    <div class="container-fluid">
-                        <a href="#" class="fal fa-caret-circle-left text-decoration-none text-muted "></a>
-                        <form class="d-flex align-items-center">
-                            <div class="search">
-                                <input class="form-control  " type="search" placeholder="Search..." aria-label="Search">
-                                <a href="#">
-                                    <i class="far fa-search icon_search text-muted"></i>
-                                </a>
-                            </div>
-                            
-
-                            <i class="fal fa-bell ms-2 text-muted"></i>
-                        </form>
-                    </div>
-                </nav>
+                 <!-- nnavbar -->
+            <?php include 'navbar.php' ?>
+                <!-- nnavbar -->
 
                 <div class="col ">
 
                     <div class="container-fluid   ">
                         <div class="d-flex justify-content-between  border-bottom bg-light px-1 py-2">
                             <h1 class="fw-bold h3">Payments Details</h1>
-                            <i class="far fs-6 fa-sort me-3 text-info d-sm-block pt-2"></i>
+                            <i class="far fa-sort me-3 fs-6 text-info  pt-2"></i>
                         </div>
 
                         <table class="table table-hover table-striped">
