@@ -41,62 +41,23 @@
 
                         <table class="table table-hover table-striped">
                             <thead >
-                                 <tr style=" display: none; "> 
-                                    <th scope="col">pour accessibilité </th>
-                                    <th scope="col">pour accessibilité</th>
-                                    <th scope="col">pour accessibilité</th>
-                                    <th scope="col">pour accessibilité</th>
-                                    <th scope="col">pour accessibilité</th>
-                                    <th scope="col">pour accessibilité</th>
-                                    <th scope="col">pour accessibilité</th> 
-
-                                </tr> 
+                               
+                                <tr class="fw-normal" style=" background-color:#F8F9FA " >
+                                    <th class="text-secondary">Name</th>
+                                    <th class="text-secondary">Payment Schedule</th>
+                                    <th class="text-secondary">Bill Number</th>
+                                    <th class="text-secondary">Amount Paid</th>
+                                    <th class="text-secondary">Balance amount</th>
+                                    <th class="text-secondary" colspan="2">Date</th>
+                                    <th  style="display: none;" >a</th>
+                                    
+                                </tr>
                             </thead>
                             <tbody class="border-top-0">
-                                 <tr>
-                                    <td class="text-secondary">Name</td>
-                                    <td class="text-secondary">Payment Schedule</td>
-                                    <td class="text-secondary">Bill Number</td>
-                                    <td class="text-secondary">Amount Paid</td>
-                                    <td class="text-secondary">Balance amount</td>
-                                    <td class="text-secondary" colspan="2">Date</td>
-                                </tr>
-                                <tr>
-                                    <td class="text-black">Karthi</td>
-                                    <td class="text-black">First</td>
-                                    <td class="text-black">00012223</td>
-                                    <td class="text-black">DHS 100,000</td>
-                                    <td class="text-black">DHS 500,000</td>
-                                    <td class="text-black">05-Jan,2022</td>
-                                    <td><i class="bi bi-eye text-info"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-black">Karthi</td>
-                                    <td class="text-black">First</td>
-                                    <td class="text-black">00012223</td>
-                                    <td class="text-black">DHS 100,000</td>
-                                    <td class="text-black">DHS 500,000</td>
-                                    <td class="text-black">05-Jan,2022</td>
-                                    <td><i class="bi bi-eye text-info"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-black">Karthi</td>
-                                    <td class="text-black">First</td>
-                                    <td class="text-black">00012223</td>
-                                    <td class="text-black">DHS 100,000</td>
-                                    <td class="text-black">DHS 500,000</td>
-                                    <td class="text-black">05-Jan,2022</td>
-                                    <td><i class="bi bi-eye text-info"></i></td>
-                                </tr>
-                                <tr>
-                                    <td class="text-black">Karthi</td>
-                                    <td class="text-black">First</td>
-                                    <td class="text-black">00012223</td>
-                                    <td class="text-black">DHS 100,000</td>
-                                    <td class="text-black">DHS 500,000</td>
-                                    <td class="text-black">05-Jan,2022</td>
-                                    <td><i class="bi bi-eye text-info"></i></td>
-                                </tr>
+                                
+                                <?php
+                                include 'tableux_payment.php '
+                                ?>
 
                             </tbody>
                         </table>
