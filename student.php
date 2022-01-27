@@ -21,19 +21,17 @@
 <main>
     <div class="container-fluid">
         <div class="row flex-nowrap">
+            
             <!-- asied -->
             <?php include 'asied.php' ?>
             <!-- asied-->
 
-
             <div class="col ">
 
                 <!-- nnavbar -->
-            <?php include 'navbar.php' ?>
+             <?php include 'navbar.php' ?>
                 <!-- nnavbar -->
-
-                <div class="col ">
-
+                           
                     <div class="bg-light py-2  ">
                     <div class="d-flex  align-items-center  justify-content-center justify-content-sm-between  mt-3">
                             <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">student list</h1>
@@ -45,8 +43,6 @@
                             </div>
                         </div>
                         <hr>
-
-
                         
                             <div class="container ">
                                 <div class="table-responsive-sm table-responsive-md px-4">
@@ -67,11 +63,8 @@
                                         <tbody>
                                            
                                            <?php
-
                                            include 'tableux_students.php'
-
                                            ?>
-
 
                                         </tbody>
                                     </table>
@@ -80,19 +73,10 @@
                         
                     </div>
 
-
-
-                </div>
-
-
-
-
             </div>
         </div>
     </div>
 </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
 
 </body>
 

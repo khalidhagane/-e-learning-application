@@ -1,8 +1,8 @@
 <div class="col-auto  col-md-3  col-xl-2 asied ">
                 
-                <div class="d-flex flex-column  align-items-center px-3 pt-2 text-white min-vh-100   ">
+                <div class="d-flex flex-column  px-3 pt-2  min-vh-100   ">
                     <div class=" pb-3  me-md-auto ">
-                        <h1 class=" border-start border-4 border-info text-dark mt-3 ps-2 h3 ">E-classe</h1>   
+                        <h1 class=" border-start border-4 border-info  mt-3 ps-2 h3 ">E-classe</h1>   
                     </div>
                     <div class="d-flex flex-column align-items-center ">
                         <img src="image/admin.png" alt="hugenerd" width="90" height="90" class="rounded-circle  mt-1">
@@ -10,7 +10,7 @@
                         <p class="text-info">Admin</p>
                     </div>
 
-                    <ul class="nav flex-column w-100" >
+                    <ul class="nav d-flex flex-column w-100" >
                         <li class=" mt-3 mb-2 text-center  w-100" >
                             <a href="home.php" class="nav-link   text-dark rounded "  >
                                 <i class="fal fa-home-lg-alt pe-2 "></i> 

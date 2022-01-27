@@ -1,6 +1,6 @@
                 <nav class="navbar">
-                    <div class="container-fluid d-flex flex-nowrap">
-                        <a href="#" class="  text-muted "> 
+                    <div class="container-fluid ">
+                        <a href="#" class=" text-muted "> 
                             <i class="fal fa-caret-circle-left "></i>
                         </a>
                         <form class="d-flex flex-nowrap align-items-center">

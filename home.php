@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
-    <title>dashboard</title>
+    <title> home </title>
 </head>
 
 <body>
@@ -24,14 +24,11 @@
             <!-- asied -->
             <?php include 'asied.php' ?>
             <!-- asied -->
-            
             <div class="col ">
-
                 <!-- nnavbar -->
-            <?php include 'navbar.php' ?>
+              <?php include 'navbar.php' ?>
                 <!-- nnavbar -->
-
-                <div class="d-flex flex-row row d-flex justify-content-around gap-3">
+                <div class="d-flex flex-wrap justify-content-around gap-3">
                    
 
                     <div class="card" style="width: 14rem;background-color:#F0F9FF;">
@@ -82,10 +79,6 @@
         </div>
     </div>
 </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-        crossorigin="anonymous"></script>
-
 
 </body>
 

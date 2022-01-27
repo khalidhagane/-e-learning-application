@@ -14,7 +14,8 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="style.css">
     <title>payment</title>
-</head>
+</head> 
+
 
 <body>
 <main>
@@ -56,7 +57,7 @@
                             <tbody class="border-top-0">
                                 
                                 <?php
-                                include 'tableux_payment.php '
+                                 include 'tableux_payment.php '
                                 ?>
 
                             </tbody>
@@ -71,9 +72,7 @@
         </div>
     </div>
 </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
-
+    
 </body>
 
 </html>
