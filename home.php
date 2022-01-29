@@ -51,7 +51,7 @@
                     </div>
 
 
-                    <div class="card" style="width: 14rem;background-color:#FEFBEC;">
+                    <div class="card" style="width: 14rem; background-color:#FEFBEC;">
 
                         <div class="card-body">
                             

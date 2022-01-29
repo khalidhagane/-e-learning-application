@@ -49,21 +49,39 @@
                                     <table class="table  table-borderless ">
                                         <thead>
                                             <tr class="text-capitalize  ">
-                                                <th scope="col" style="visibility: hidden;" >a</th>
-                                                <th scope="col" class="text-muted h6 ">name</th>
-                                                <th scope="col" class=" text-muted h6">email</th>
-                                                <th scope="col" class=" text-muted h6">phone</th>
-                                                <th scope="col" class="text-muted h6">enroll number</th>
-                                                <th scope="col" class=" text-muted h6">date of addmision</th>
-                                                <th scope="col" style="display: none;">a</th>
-                                                <th scope="col" style="display: none;">a</th>
+                                                <th  style="visibility: hidden;" >a</th>
+                                                <th class="text-muted h6 ">name</th>
+                                                <th class=" text-muted h6">email</th>
+                                                <th class=" text-muted h6">phone</th>
+                                                <th class="text-muted h6">enroll number</th>
+                                                <th class=" text-muted h6">date of addmision</th>
+                                                <th style="display: none;">a</th>
+                                                <th style="display: none;">a</th>
                                             </tr>
                                         </thead>
 
                                         <tbody>
                                            
                                            <?php
-                                           include 'tableux_students.php'
+                                        //    include 'tableux_students.php'
+                                              $array = file_get_contents('tableau_student.json');
+                                              $student = json_decode( $array,true)
+                                           ?>
+
+                                           <?php
+                                           foreach ($student as $TB ){
+                                            echo ' <tr class="bg-white ">
+                                            <td  ><img src="image/student.jpg" width="65" alt="image représente étudiants"> </td>
+                                            <td>'.$TB['name'].'</td>
+                                            <td >'.$TB['email'].'</td>
+                                            <td >'.$TB['phone'].'</td>
+                                            <td>'.$TB['enroll_number'].'</td>
+                                            <td >'.$TB['date_of_addmision'].'</td>
+                                            <td><a href="#"><i class="fal fa-pen fs-6 text-info"></i></a></td>
+                                            <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
+                                            </tr>';
+                                              }
+
                                            ?>
 
                                         </tbody>

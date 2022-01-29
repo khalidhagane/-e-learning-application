@@ -40,28 +40,50 @@
                             <i class="far fa-sort me-3 fs-6 text-info  pt-2"></i>
                         </div>
 
-                        <table class="table table-hover table-striped">
-                            <thead >
-                               
-                                <tr class="fw-normal" style=" background-color:#F8F9FA " >
-                                    <th class="text-secondary">Name</th>
-                                    <th class="text-secondary">Payment Schedule</th>
-                                    <th class="text-secondary">Bill Number</th>
-                                    <th class="text-secondary">Amount Paid</th>
-                                    <th class="text-secondary">Balance amount</th>
-                                    <th class="text-secondary" colspan="2">Date</th>
-                                    <th  style="display: none;" >a</th>
-                                    
-                                </tr>
-                            </thead>
-                            <tbody class="border-top-0">
-                                
-                                <?php
-                                 include 'tableux_payment.php '
-                                ?>
 
-                            </tbody>
-                        </table>
+                        <div class="table-responsive-sm table-responsive-md">
+                            <table class="table table-borderless ">
+                                <thead>
+                                    <tr class="fw-normal" style=" background-color:#F8F9FA " >
+                                        <th class="text-secondary">Name</th>
+                                        <th class="text-secondary">Payment Schedule</th>
+                                        <th class="text-secondary">Bill Number</th>
+                                        <th class="text-secondary">Amount Paid</th>
+                                        <th class="text-secondary">Balance amount</th>
+                                        <th class="text-secondary" colspan="2">Date</th>
+                                        <th  style="display: none;" >a</th>
+                                        
+                                    </tr>
+                                </thead>
+
+                                        <tbody>
+                                           
+                                           <?php
+                                            // include 'tableux_payment.php '
+                                              $array_p = file_get_contents('tableau_payment.json');
+                                               $payment = json_decode( $array_p,true)
+                                           ?>
+
+                                           <?php
+                                          foreach($payment as $key){
+                                            echo '<tr>
+                                            <td class="text-black">'.$key['name'].'</td>
+                                            <td class="text-black">'.$key['payment_schedule'].'</td>
+                                            <td class="text-black">'.$key['bill_number'].'</td>
+                                            <td class="text-black">'.$key['amount_paid'].'</td>
+                                            <td class="text-black">'.$key['balance_amount'].'</td>
+                                            <td class="text-black">'.$key['date'].'</td>
+                                            <td><i class="fal fa-eye text-info"></i></td>
+                                         </tr>';
+                                          }
+                                           ?>
+
+                                        </tbody>
+                            </table>
+                        </div>
+                            
+
+                        
                     </div>
 
                 </div>
