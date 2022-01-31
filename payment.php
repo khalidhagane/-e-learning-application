@@ -32,9 +32,9 @@
             <?php include 'navbar.php' ?>
                 <!-- nnavbar -->
 
-                <div class="col ">
+                <div class="col">
 
-                    <div class="container-fluid   ">
+                    <div class="container-fluid">
                         <div class="d-flex justify-content-between  border-bottom bg-light px-1 py-2">
                             <h1 class="fw-bold h3">Payments Details</h1>
                             <i class="far fa-sort me-3 fs-6 text-info  pt-2"></i>

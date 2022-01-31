@@ -45,7 +45,7 @@
                         <hr>
                         
                             <div class="container ">
-                                <div class="table-responsive-sm table-responsive-md px-4">
+                                <div class="table-responsive-sm table-responsive-md  px-4">
                                     <table class="table  table-borderless ">
                                         <thead>
                                             <tr class="text-capitalize  ">
