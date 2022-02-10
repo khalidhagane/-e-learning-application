@@ -82,7 +82,7 @@
                                            while ($row= $result->fetch_assoc()): ?>
 
                                                      <tr class="bg-white ">
-                                                <td  ><img src="image/student.jpg" width="65" alt="image représente étudiants"> </td>
+                                                <td  ><img src="image/student.jpg" width="65" alt="image représente étudiants"></td>
                                                 
                                                 <td> <?php echo$row['name'];?></td>
                                                 <td> <?php echo$row['email'];?></td>
@@ -90,7 +90,7 @@
                                                 <td> <?php echo$row['number'];?></td>
                                                 <td> <?php echo$row['date'];?></td>
 
-                                                <td><a href="#"><i class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                <td><a href='update.php?edit=<?php echo $row['id'];?>'><i name="update" class="fal fa-pen fs-6 text-info"></i></a></td>
                                                 <td><a href='connection.php?delete=<?php echo $row['id'];?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
                                                 </tr>
 
