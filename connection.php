@@ -4,11 +4,16 @@
 $mysqli = new mysqli('localhost', 'root', '', 'e-classe') or
 die(mysqli_error($mysqli));
 
-$result = $mysqli->query("select * FROM tableau_student")
+$result = $mysqli->query("SELECT * FROM tableau_student")
 or die($mysqli->error);
 
+
+$rlt = $mysqli->query("SELECT * FROM tableau_payement")
+ or die($mysqli->error); 
+
+
 $id=0;
-$update = false;
+// $update = false;
 
 $name="";
 $email="";
@@ -35,7 +40,7 @@ if(isset($_POST['save'])){
 
  if (isset($_GET['delete'])){
      $id= $_GET['delete'];
-     $mysqli->query("DELETE FROM tableau_student WHERE id=$id") or die($mysqli->error());
+     $mysqli->query("DELETE  FROM tableau_student WHERE id=$id") or die($mysqli->error());
 
      header("location: student.php");
  }
@@ -44,7 +49,7 @@ if(isset($_POST['save'])){
  if (isset($_GET['edit'])){
      $id = $_GET['edit'];
 
-     $update = true;
+    //  $update = true;
 
      $result = $mysqli->query("SELECT * FROM tableau_student WHERE id=$id") or die($mysqli->error());
       if (isset($result)){
@@ -78,17 +83,5 @@ if(isset($_POST['save'])){
      }
  
     
-// if(count($_POST)>0){
-// 	if($_POST['type']==3){
-// 		$id=$_POST['id'];
-// 		$sql = "DELETE FROM e-class WHERE id=$id ";
-// 		if (mysqli_query($conn, $sql)) {
-// 			echo $id;
-// 		} 
-// 		else {
-// 			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-// 		}
-// 		mysqli_close($conn);
-// 	}
-// }
+
 ?>

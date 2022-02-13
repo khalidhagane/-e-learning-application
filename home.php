@@ -1,3 +1,13 @@
+
+
+ <?php 
+ 
+
+ require_once 'connection.php';
+ 
+ 
+        
+ ?>
 <!doctype html>
 <html lang="en">
 
@@ -37,7 +47,15 @@
                             
                             <i class="far fa-graduation-cap h3 text-info "></i>
                             <p class="text-secondary">student</p>
-                            <p class="float-end fw-bolder fs-3">342</p>
+                            <!-- <p class="float-end fw-bolder fs-3">342</p> -->
+                            <?php
+
+                          
+                             $result = $mysqli->query("SELECT * FROM tableau_student");
+                             echo"<div class='float-end fw-bolder fs-3'>$result->num_rows</div>";
+                             
+                             
+                            ?>
                         </div>
                     </div>
 

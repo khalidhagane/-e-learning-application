@@ -1,3 +1,20 @@
+<?php 
+// $mysqli = new mysqli('localhost', 'root', '', 'e-classe') or
+// die(mysqli_error($mysqli));
+
+// $rlt = $mysqli->query("SELECT * FROM tableau_payement")
+// or die($mysqli->error);   
+
+
+ 
+
+require_once 'connection.php';
+
+
+       
+
+ ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -60,23 +77,42 @@
                                            
                                            <?php
                                             // include 'tableux_payment.php '
-                                              $array_p = file_get_contents('tableau_payment.json');
-                                               $payment = json_decode( $array_p,true)
+
+                                            //   $array_p = file_get_contents('tableau_payment.json');
+                                            //    $payment = json_decode( $array_p,true)
                                            ?>
 
                                            <?php
-                                          foreach($payment as $key){
-                                            echo '<tr>
-                                            <td class="text-black">'.$key['name'].'</td>
-                                            <td class="text-black">'.$key['payment_schedule'].'</td>
-                                            <td class="text-black">'.$key['bill_number'].'</td>
-                                            <td class="text-black">'.$key['amount_paid'].'</td>
-                                            <td class="text-black">'.$key['balance_amount'].'</td>
-                                            <td class="text-black">'.$key['date'].'</td>
+                                        //   foreach($payment as $key){
+                                        //     echo '<tr>
+                                        //     <td class="text-black">'.$key['name'].'</td>
+                                        //     <td class="text-black">'.$key['payment_schedule'].'</td>
+                                        //     <td class="text-black">'.$key['bill_number'].'</td>
+                                        //     <td class="text-black">'.$key['amount_paid'].'</td>
+                                        //     <td class="text-black">'.$key['balance_amount'].'</td>
+                                        //     <td class="text-black">'.$key['date'].'</td>
+                                        //     <td><i class="fal fa-eye text-info"></i></td>
+                                        //  </tr>';
+                                        //   }
+                                        ?>
+
+                                        <?php
+                                        while ($array= $rlt->fetch_assoc()): ?>
+
+                                                  <tr class="bg-white ">
+
+                                             <td> <?php echo$array['name'];?></td>
+                                             <td> <?php echo$array['payment_schedule'];?></td>
+                                             <td> <?php echo$array['bill_number'];?></td>
+                                             <td> <?php echo$array['amount_paid'].' '.'DH';?></td>
+                                             <td> <?php echo$array['balance_amount'].' '.'DH';?></td>
+                                             <td> <?php echo$array['date'];?></td>
+
                                             <td><i class="fal fa-eye text-info"></i></td>
-                                         </tr>';
-                                          }
-                                           ?>
+                                             </tr>
+
+                                         <?php
+                                          endwhile ;?>
 
                                         </tbody>
                             </table>
