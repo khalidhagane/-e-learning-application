@@ -7,10 +7,8 @@ die(mysqli_error($mysqli));
 $result = $mysqli->query("SELECT * FROM tableau_student")
 or die($mysqli->error);
 
-
 $rlt = $mysqli->query("SELECT * FROM tableau_payement")
  or die($mysqli->error); 
-
 
 $id=0;
 // $update = false;
@@ -20,7 +18,6 @@ $email="";
 $phone="";
 $number="";
 $date="";
-
 
 // insert
 if(isset($_POST['save'])){

@@ -104,7 +104,6 @@ require_once 'connection.php';
                                              <td> <?php echo$array['name'];?></td>
                                              <td> <?php echo$array['payment_schedule'];?></td>
                                              <td> <?php echo$array['bill_number'];?></td>
-                                             <td> <?php echo$array['amount_paid'].' '.'DH';?></td>
                                              <td> <?php echo$array['balance_amount'].' '.'DH';?></td>
                                              <td> <?php echo$array['date'];?></td>
 
