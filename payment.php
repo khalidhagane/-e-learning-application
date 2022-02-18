@@ -1,17 +1,6 @@
 <?php 
-// $mysqli = new mysqli('localhost', 'root', '', 'e-classe') or
-// die(mysqli_error($mysqli));
 
-// $rlt = $mysqli->query("SELECT * FROM tableau_payement")
-// or die($mysqli->error);   
-
-
- 
-
-require_once 'connection.php';
-
-
-       
+include 'connection.php';  
 
  ?>
 
@@ -32,7 +21,6 @@ require_once 'connection.php';
     <link rel="stylesheet" href="style.css">
     <title>payment</title>
 </head> 
-
 
 <body>
 <main>
@@ -57,7 +45,6 @@ require_once 'connection.php';
                             <i class="far fa-sort me-3 fs-6 text-info  pt-2"></i>
                         </div>
 
-
                         <div class="table-responsive-sm table-responsive-md">
                             <table class="table table-borderless ">
                                 <thead>
@@ -74,8 +61,34 @@ require_once 'connection.php';
                                 </thead>
 
                                         <tbody>
-                                           
                                            <?php
+
+                                                        $result="SELECT * FROM  tableau_payment";
+
+                                                        //mysqli_query -> function kat dir liya traitment l code li 7ato $row , kaykon 3la chakl string                                     
+                                                        // okan 7ato f $query 
+                                                        $query = mysqli_query($con,$result);
+
+                                                        // mysqli_fetch_array -> kat 7awal liya man string l tableau associatif  
+                                                         while($row = mysqli_fetch_array($query)) { 
+
+                                                        //  foreach ($query as $row){
+                                                        ?>
+                                                                <tr class="bg-white ">
+                                                            <td> <?php echo$row['name'];?></td>
+                                                            <td> <?php echo$row['payment_schedule'];?></td>
+                                                            <td> <?php echo$row['bill_number'];?></td>
+                                                            <td> <?php echo$row['amount_paid'];?></td>
+                                                            <td> <?php echo$row['balance_amount'];?></td>
+                                                            <td> <?php echo$row['date'];?></td>
+                                                            <td><i class="fal fa-eye text-info"></i></td>
+                                                            </tr>
+                                                             <?php 
+                                                             }
+                                                            ?> 
+
+                                           <?php
+                                             
                                             // include 'tableux_payment.php '
 
                                             //   $array_p = file_get_contents('tableau_payment.json');
@@ -96,22 +109,7 @@ require_once 'connection.php';
                                         //   }
                                         ?>
 
-                                        <?php
-                                        while ($array= $rlt->fetch_assoc()): ?>
-
-                                                  <tr class="bg-white ">
-
-                                             <td> <?php echo$array['name'];?></td>
-                                             <td> <?php echo$array['payment_schedule'];?></td>
-                                             <td> <?php echo$array['bill_number'];?></td>
-                                             <td> <?php echo$array['balance_amount'].' '.'DH';?></td>
-                                             <td> <?php echo$array['date'];?></td>
-
-                                            <td><i class="fal fa-eye text-info"></i></td>
-                                             </tr>
-
-                                         <?php
-                                          endwhile ;?>
+                                        
 
                                         </tbody>
                             </table>

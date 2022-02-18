@@ -1,8 +1,10 @@
 
  <?php 
+ 
+  include 'coumpteur.php';
 
- require_once 'connection.php';
-      
+ include 'connection.php';
+     
  ?>
  
 <!doctype html>
@@ -43,14 +45,9 @@
                             
                             <i class="far fa-graduation-cap h3 text-info "></i>
                             <p class="text-secondary">student</p>
-                            <!-- <p class="float-end fw-bolder fs-3">342</p> -->
-                            <?php
-                          
-                             $result = $mysqli->query("SELECT * FROM tableau_student");
-                             
-                             echo"<div class='float-end fw-bolder fs-3'>$result->num_rows</div>";
-                                             
-                            ?>
+                        
+                               <div class='float-end fw-bolder fs-3'> <?php echo $compteur_std ?> </div>
+                                                      
                         </div>
                     </div>
 
@@ -58,7 +55,7 @@
                         <div class="card-body">
                             <i class=" col-3 bi bi-bookmark h3"  style="color: #e7b9dc;"></i>
                             <p class="text-secondary">cours</p>
-                            <p class="float-end fw-bolder fs-3">243</p>
+                            <p class="float-end fw-bolder fs-3"> <?php echo $compteur_crs ?> </p>
                         </div>
                     </div>
 
@@ -69,14 +66,12 @@
                             <i class="fal fa-usd-square h3 text-info"></i>
                             <p class="text-secondary">payment</p>
                             <div class="d-flex align-items-center float-end">
-                                <h5>DHS</h5>
-                                <!-- <p class="fw-bolder fs-3 ps-1">556,000</p> -->
+                                
+                                  <p class="fw-bolder fs-3 ps-1"> <?php echo $sum;?> </p>
+                                  <h5>DHS</h5>  
                                 
                                 <?php
-                          
-                            //  $result = $mysqli->query("SELECT * SUM(balance_amount) ,FROM tableau_student");
-                            //    echo"<div class='float-end fw-bolder fs-3'>$result->num_rows</div>";
-                            // die(var_dump($result));
+                 
                                              
                             ?>
 

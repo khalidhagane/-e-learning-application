@@ -1,13 +1,4 @@
 
- <?php 
- 
-
- require_once 'connection.php';
- 
- 
-        
- ?>
-
 
 <!doctype html>
 <html lang="en">
@@ -57,8 +48,7 @@
                                 
                             </div>
                         </div>
-                        <hr>
-                        
+                        <hr>                       
                         
                             <div class="container ">
                                 <div class="table-responsive-sm table-responsive-md  px-4">
@@ -76,36 +66,46 @@
                                             </tr>
                                         </thead>
 
-                                        <tbody>                                         
+                                        <tbody>  
+                                                                                 
                                            
-                                           <?php
-                                           while ($row= $result->fetch_assoc()): ?>
+                                        <?php
+                                        include 'connection.php';
 
-                                                     <tr class="bg-white ">
-                                                <td  ><img src="image/student.jpg" width="65" alt="image représente étudiants"></td>
-                                                
+                                        // kat selecti  liya kolchi li kain f tableau o kat  7oto liya f $row  
+                                         $result="SELECT * FROM tableau_student";
+
+                                          //mysqli_query -> function kat dir liya traitment l code li 7ato $row , kaykon 3la chakl string                                     
+                                          // okan 7ato f $query 
+                                         $query=mysqli_query($con,$result);
+                                         
+                                         
+                                          // mysqli_fetch_array -> kat 7awal liya man opjet string l tableau associatif  
+                                         while($row = mysqli_fetch_array($query)){    
+
+                                            // foreach ($query as $row)
+                                            ?>
+                                                    <tr class="bg-white ">
+                                                <td><img src="image/student.jpg" width="65" alt="image représente étudiants"></td>
                                                 <td> <?php echo$row['name'];?></td>
                                                 <td> <?php echo$row['email'];?></td>
                                                 <td> <?php echo$row['phone'];?></td>
                                                 <td> <?php echo$row['number'];?></td>
                                                 <td> <?php echo$row['date'];?></td>
-
-                                                <td><a href='update.php?edit=<?php echo $row['id'];?>'><i name="update" class="fal fa-pen fs-6 text-info"></i></a></td>
-                                                <td><a href='connection.php?delete=<?php echo $row['id'];?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
+                                                <td><a href='update.php?id=<?php echo $row['id'];?>'><i name="update" class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                <td><a href='delete.php?id=<?php echo $row['id'];?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
                                                 </tr>
 
-                                            <?php
-                                             endwhile ;?>
-                                               
-                                              
-                                             <?php
+                                           <?php
+                                                
+
+                                        }
+
                                               //  include 'tableux_students.php'
 
                                               //   $array = file_get_contents('tableau_student.json');
                                               //   $student = json_decode( $array,true) 
-                                             ?>
- 
-                                           <?php
+
                                             //    foreach ($student as $TB ){
                                
                                             //    if($TB['name']=='khalid'){
@@ -121,8 +121,7 @@
                                             // <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
                                             // </tr>';
                                             // //   }
-                                            // }
-                                       
+                                            // }                                      
 
                                          // for ($i = 0; $i < count($student);$i++) {
                                         //     echo'<tr class="bg-white ">';
@@ -136,9 +135,10 @@
                                         //     echo '<td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>';
                                         //     echo '</tr>';
                                         // }
-
-                                           ?>
-
+     
+                                       
+                                ?>
+                           
                                         </tbody>
                                     </table>
                                 </div>
@@ -154,3 +154,8 @@
 </body>
 
 </html>
+
+
+           
+ 
+   
