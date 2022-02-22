@@ -5,5 +5,4 @@
 $con = mysqli_connect('localhost', 'root', '', 'e-classe');
 
 
-
 ?>

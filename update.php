@@ -9,7 +9,7 @@ include("connection.php");
 
         $result = "SELECT * FROM tableau_student WHERE id=$id";
         $sql=mysqli_query($con,$result);
-        // $row = $result->fetch_array();
+        
         while($row = mysqli_fetch_assoc($sql)){
                     $name = $row['name'];
                     $email = $row['email'];

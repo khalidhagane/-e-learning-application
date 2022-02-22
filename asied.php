@@ -1,3 +1,6 @@
+<?php include 'connection.php';
+session_start();
+?>
 <div class="col-auto  col-md-3  col-xl-2 asied ">
                 
                 <div class="d-flex flex-column  px-3 pt-2  min-vh-100   ">
@@ -6,7 +9,9 @@
                     </div>
                     <div class="d-flex flex-column align-items-center ">
                         <img src="image/admin.png" alt="hugenerd" width="90" height="90" class="rounded-circle  mt-1">
-                        <h4 class="text-dark mt-3 h6"> <b> Admin name </b></h4>
+                        
+                        <h4 class="text-dark mt-3 h6"> <b> <?php echo $_SESSION['username']; ?> </b></h4>                                            
+
                         <p class="text-info">Admin</p>
                     </div>
 

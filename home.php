@@ -1,6 +1,6 @@
 
  <?php 
- 
+//    session_start();
   include 'coumpteur.php';
 
  include 'connection.php';
@@ -44,7 +44,7 @@
                         <div class="card-body">
                             
                             <i class="far fa-graduation-cap h3 text-info "></i>
-                            <p class="text-secondary">student</p>
+                            <p class="text-secondary"><?php /* echo $_SESSION['email'] */ ?>student</p>
                         
                                <div class='float-end fw-bolder fs-3'> <?php echo $compteur_std ?> </div>
                                                       
@@ -68,24 +68,18 @@
                             <div class="d-flex align-items-center float-end">
                                 
                                   <p class="fw-bolder fs-3 ps-1"> <?php echo $sum;?> </p>
-                                  <h5>DHS</h5>  
-                                
-                                <?php
-                 
-                                             
-                            ?>
+                                  <h5>DHS</h5>                                  
 
                             </div>
                         </div>
                     </div>
-
 
                     <div class="card" style="width: 14rem;background-image: linear-gradient(20deg,#00C1FE,#FAFFC1);">
                         <div class="card-body">
                             
                             <i class="fal fa-user h3 text-white"></i>
                             <p class="text-secondary">users</p>
-                            <p class="float-end fw-bolder fs-3">243</p>
+                            <p class="float-end fw-bolder fs-3"><?php echo $coumpteur_user;?></p>
                         </div>
                     </div>
                 </div>
