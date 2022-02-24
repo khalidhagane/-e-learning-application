@@ -25,6 +25,7 @@ include 'connection.php';
 <body>
 <main>
     <div class="container-fluid">
+        
         <div class="row flex-nowrap">
             <!-- asied -->
             <?php include 'asied.php' ?>
