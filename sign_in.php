@@ -5,6 +5,7 @@ session_start();
 
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,23 +46,29 @@ session_start();
         <div class= "d-flex flex-column gap-4" >
             <div >
                 <label  class="form-label">Email</label>
-                <input type="email" name="email" class="form-control"  placeholder="Enter your email" value=<?php if(isset($_COOKIE)){echo $_COOKIE['email'];}?> >  
-                <p class=" alert-danger   rounded"></p>
+                <input type="email" name="email" class="form-control"  placeholder="Enter your email" value= "<?php if(isset($_COOKIE['email'])) echo $_COOKIE['email'];?>" >   
+                
                   
             </div>
 
             <div >
                 <label  class="form-label">Password</label>
-                <input type="password" name="password" class="form-control"  placeholder="Enter your password" value=<?php if(isset($_COOKIE)){echo $_COOKIE['password'];}?>>
-                <p class=" alert-danger   rounded"></p> 
-               
+                <input type="password" name="password" class="form-control"  placeholder="Enter your password" value= "<?php if(isset($_COOKIE['password'])) echo $_COOKIE['password'];?>">
+  
             </div>
+
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" name="remember">
+                <label class="form-check-label" >Remember me </label>
+            </div>
+
             <div class="d-flex flex-column align-items-center gap-3">
                  
                <button  type="submit" name = "submit" class="btn-info btn w-100 text-white text-decoration-none"> SIGN IN </button>
                                   
                 <p class=" text-secondary">Forgot your password? <a href="#" class="text-info"> Reset Password</a></p>
             </div>
+           
         </div>
     </Form>
 </div>

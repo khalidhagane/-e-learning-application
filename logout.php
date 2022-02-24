@@ -2,9 +2,7 @@
 
  session_start();
 
- session_unset();
-
  session_destroy();
 
- header('location:logout.php');
+ header('location:sign_in.php');
 ?>

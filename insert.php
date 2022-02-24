@@ -25,23 +25,23 @@
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">name</label>
-                    <input type="name"   name="name"  class="form-control" >
+                    <input type="name"   name="name"  class="form-control" required>
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">email </label>
-                    <input type="email" name="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    <input type="email" name="email"  class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" required>
                  </div>
                 <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">phone</label>
-                    <input type="phone" name="phone"  class="form-control" >
+                    <label for="exampleInputEmail1" class="form-label" >phone</label>
+                    <input type="phone" name="phone"  class="form-control" required >
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">enroll number</label>
-                    <input type="text" name="number"  class="form-control" >
+                    <input type="text" name="number"  class="form-control"required >
                 </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">date of addmision</label>
-                    <input type="date" name="date"  class="form-control" >
+                    <input type="date" name="date"  class="form-control" required >
                 </div> 
 
                 <button type="submit" class="btn btn-primary" name="save">save</button>
@@ -59,23 +59,25 @@
 include 'connection.php';
 // isset kat ha9a9 lina man varaile ($_POST) wach 3amar ola khawi
 //ila kan 3amar kola valure kat7at liya f varaible dyalha ex: $name=($_POST['name'])
+
    if(isset($_POST['save'])){
-     $name=$_POST['name'];
-     $email=$_POST['email'];
-     $phone=$_POST['phone'];
-     $number=$_POST['number'];
-     $date=$_POST['date'];
-// insert into -> 7oot liya f tableau_student kola varaible f row dyalo ex: column(name) kan hat fih  varaible $name
-     $insert="INSERT INTO tableau_student(name,email,phone,number,date)VALUES('$name','$email','$phone','$number','$date')";
 
-     //mysqli_query -> function kat dir liya l'execution l requete sql li 7ato variable $insert f database (li connecti b $con)  
-    if($query= mysqli_query($con,$insert)){
-    
+        $name=$_POST['name'];
+        $email=$_POST['email'];
+        $phone=$_POST['phone'];
+        $number=$_POST['number'];
+        $date=$_POST['date'];
+        
+        // insert into -> 7oot liya f tableau_student kola varaible f row dyalo ex: column(name) kan hat fih  varaible $name
+        $insert="INSERT INTO tableau_student(name,email,phone,number,date)VALUES('$name','$email','$phone','$number','$date')";
+        //mysqli_query -> function kat dir liya l'execution l requete sql li 7ato variable $insert f database (li connecti b $con)
+        $query= mysqli_query($con,$insert); 
 
-// header('location:nom_page') kat raja3ni l page li bghit rja3 liha man ba3d hadak insert li dart ex: header('location: student.php')
-     header ('location: student.php');
-    }
-     mysqli_close($con);
+        if($query){
+            // header('location:nom_page') kat raja3ni l page li bghit rja3 liha man ba3d hadak insert li dart ex: header('location: student.php')
+            header ('location: student.php');
+        }
+        mysqli_close($con);
    }
 
 ?>

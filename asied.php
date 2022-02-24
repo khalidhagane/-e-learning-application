@@ -10,7 +10,7 @@ session_start();
                     <div class="d-flex flex-column align-items-center ">
                         <img src="image/admin.png" alt="hugenerd" width="90" height="90" class="rounded-circle  mt-1">
                         
-                        <h4 class="text-dark mt-3 h6"> <b> <?php echo $_SESSION['username']; ?> </b></h4>                                            
+                        <h4 class="text-dark mt-3 h6"> <b> <?php if(isset($_SESSION['username']))echo $_SESSION['username']; ?> </b></h4>                                            
 
                         <p class="text-info">Admin</p>
                     </div>
@@ -56,7 +56,7 @@ session_start();
                         </li>
 
                         <li class="mt-5 text-center w-100 " >
-                            <a href="sign_in.php" class=" nav-link  text-dark rounded ">
+                            <a href="logout.php" class=" nav-link  text-dark rounded ">
                                 <span class=" d-none d-sm-inline pe-3 ">Logout</span>
                                 <i class="fal fa-sign-out-alt "></i>
                             </a>

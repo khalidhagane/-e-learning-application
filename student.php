@@ -66,42 +66,48 @@
                                             </tr>
                                         </thead>
 
-                                        <tbody>  
-                                                                                 
+                                        <tbody>                                              
                                            
-                                        <?php
-                                        include 'connection.php';
+                                            <?php
+                                            include 'connection.php';
 
-                                        // kat selecti  liya kolchi li kain f tableau o kat  7oto liya f $row  
-                                         $result="SELECT * FROM tableau_student";
+                                            // kat selecti  liya kolchi li kain f tableau o kat  7oto liya f $row 
+                                            $result="SELECT * FROM tableau_student";
 
-                                          //mysqli_query -> function kat dir liya traitment l code li 7ato $row , kaykon 3la chakl string                                     
-                                          // okan 7ato f $query 
-                                         $query=mysqli_query($con,$result);
-                                         
-                                         
-                                          // mysqli_fetch_array -> kat 7awal liya man opjet string l tableau associatif  
-                                         while($row = mysqli_fetch_array($query)){    
+                                            //mysqli_query -> fonction kat dir liya traitment l code li 7ato , kaykon 3la chakl string                                     
+                                            // okan 7ato f $query 
+                                            $query=mysqli_query($con,$result);
+                                            
 
-                                            // foreach ($query as $row)
+                                            //   $row= mysqli_fetch_array($query);
+                                                                                    
+                                            //   while($row = mysqli_fetch_assoc($query)){ 
+                                                  
+                                                    // for($i=0;$i<count($row);$i++){
+                                                       foreach($query as $row){
+
+                                                //  
                                             ?>
                                                     <tr class="bg-white ">
                                                 <td><img src="image/student.jpg" width="65" alt="image représente étudiants"></td>
-                                                <td> <?php echo$row['name'];?></td>
-                                                <td> <?php echo$row['email'];?></td>
-                                                <td> <?php echo$row['phone'];?></td>
-                                                <td> <?php echo$row['number'];?></td>
-                                                <td> <?php echo$row['date'];?></td>
-                                                <td><a href='update.php?id=<?php echo $row['id'];?>'><i name="update" class="fal fa-pen fs-6 text-info"></i></a></td>
+                                                <td> <?php echo $row['name'];?></td>
+                                                <td> <?php echo $row['email'];?></td>
+                                                <td> <?php echo $row['phone'];?></td>
+                                                <td> <?php echo $row['number'];?></td>
+                                                <td> <?php echo $row['date'];?></td>
+                                                <td><a href='update.php?id=<?php echo $row['id'];?>'><i class="fal fa-pen fs-6 text-info"></i></a></td>
                                                 <td><a href='delete.php?id=<?php echo $row['id'];?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
                                                 </tr>
 
                                            <?php
-                                                
+                                               }   
 
-                                        }
 
-                                              //  include 'tableux_students.php'
+
+
+
+
+                                                //  include 'tableux_students.php'
 
                                               //   $array = file_get_contents('tableau_student.json');
                                               //   $student = json_decode( $array,true) 
@@ -121,9 +127,17 @@
                                             // <td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>
                                             // </tr>';
                                             // //   }
-                                            // }                                      
+                                            // }  
+                                            
+                                            
 
-                                         // for ($i = 0; $i < count($student);$i++) {
+                                        //          include 'tableux_students.php';
+
+                                        //          $array = file_get_contents('tableau_student.json');
+                                        //          $student = json_decode( $array,true) ;
+
+
+                                        // for ($i = 0; $i < count($student);$i++) {
                                         //     echo'<tr class="bg-white ">';
                                         //     echo '<td  ><img src="image/student.jpg" width="65" alt="image représente étudiants"> </td>';
                                         //     echo '<td>'. $student[$i]['name'].'</td>';
@@ -135,9 +149,12 @@
                                         //     echo '<td><a href="#"><i class="fal fa-trash fs-6 text-info"></i></a></td>';
                                         //     echo '</tr>';
                                         // }
+                                            ?>
+
+                                             
      
                                        
-                                ?>
+                                
                            
                                         </tbody>
                                     </table>

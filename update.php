@@ -3,21 +3,22 @@
 include("connection.php");
 
 
-    // edit
+    // update
 
         $id = $_GET['id'];
 
         $result = "SELECT * FROM tableau_student WHERE id=$id";
         $sql=mysqli_query($con,$result);
         
-        while($row = mysqli_fetch_assoc($sql)){
+        while($row = mysqli_fetch_assoc($sql))
+        {
                     $name = $row['name'];
                     $email = $row['email'];
                     $phone = $row['phone'];
                     $number = $row['number'];
                     $date = $row['date'];
         }
-// update
+
         if(isset($_POST['update'])){
 
             $name=$_POST['name'];
@@ -29,9 +30,9 @@ include("connection.php");
             $result = "UPDATE tableau_student SET name='$name', email='$email', phone='$phone', number='$number', date='$date' WHERE id='$id'" ;
             $sql = mysqli_query($con,$result);
 
-            if($sql){
+            // if($sql){
                 header("location:student.php");
-            }
+            // }
             
          }
 

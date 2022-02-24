@@ -4,8 +4,12 @@
   include 'coumpteur.php';
 
  include 'connection.php';
-     
+
+//   if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+
+   
  ?>
+ 
  
 <!doctype html>
 <html lang="en">
