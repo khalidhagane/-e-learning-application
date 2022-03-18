@@ -1,4 +1,11 @@
+<?php
 
+session_start();
+    if(empty($_SESSION['username'])){
+        header('location:sign_in.php');
+        
+    }
+?>
 
 <!doctype html>
 <html lang="en">
@@ -33,9 +40,9 @@
             <div class="col ">
 
                 <!-- nnavbar -->
-             <?php include 'navbar.php' ?>
+            <?php include 'navbar.php' ?>
                 <!-- nnavbar -->
-                           
+                
                     <div class="bg-light py-2  ">
                     <div class="d-flex  align-items-center  justify-content-center justify-content-sm-between  mt-3">
                             <h1 class=" fw-bolder d-none d-sm-block mx-3 h5">student list</h1>
@@ -67,27 +74,22 @@
                                         </thead>
 
                                         <tbody>                                              
-                                           
+                                        
                                             <?php
                                             include 'connection.php';
-
-                                            // kat selecti  liya kolchi li kain f tableau o kat  7oto liya f $row 
                                             $result="SELECT * FROM tableau_student";
 
-                                            //mysqli_query -> fonction kat dir liya traitment l code li 7ato , kaykon 3la chakl string                                     
-                                            // okan 7ato f $query 
                                             $query=mysqli_query($con,$result);
                                             
-
                                             //   $row= mysqli_fetch_array($query);
-                                                                                    
+                                            
                                             //   while($row = mysqli_fetch_assoc($query)){ 
-                                                  
+                                                
                                                     // for($i=0;$i<count($row);$i++){
-                                                       foreach($query as $row){
+                                                    foreach($query as $row){
 
                                                 //  
-                                            ?>
+                                                ?>
                                                     <tr class="bg-white ">
                                                 <td><img src="image/student.jpg" width="65" alt="image représente étudiants"></td>
                                                 <td> <?php echo $row['name'];?></td>
@@ -99,8 +101,8 @@
                                                 <td><a href='delete.php?id=<?php echo $row['id'];?>'> <i class="fal fa-trash fs-6 text-info"></i> </a></td>
                                                 </tr>
 
-                                           <?php
-                                               }   
+                                                <?php
+                                            }   
 
 
 
@@ -113,7 +115,7 @@
                                               //   $student = json_decode( $array,true) 
 
                                             //    foreach ($student as $TB ){
-                               
+                            
                                             //    if($TB['name']=='khalid'){
 
                                             // echo ' <tr class="bg-white ">
@@ -151,11 +153,6 @@
                                         // }
                                             ?>
 
-                                             
-     
-                                       
-                                
-                           
                                         </tbody>
                                     </table>
                                 </div>
@@ -172,7 +169,3 @@
 
 </html>
 
-
-           
- 
-   

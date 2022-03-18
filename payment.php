@@ -1,8 +1,15 @@
+<?php
+session_start();
+    if(empty($_SESSION['username'])){
+        header('location:sign_in.php');
+    }
+?>
+
 <?php 
 
 include 'connection.php';  
 
- ?>
+?>
 
 <!doctype html>
 <html lang="en">
@@ -34,7 +41,7 @@ include 'connection.php';
 
             <div class="col ">
 
-                 <!-- nnavbar -->
+                <!-- nnavbar -->
             <?php include 'navbar.php' ?>
                 <!-- nnavbar -->
 
@@ -62,16 +69,15 @@ include 'connection.php';
                                 </thead>
 
                                         <tbody>
-                                           <?php
+                                        <?php
 
                                                         $result="SELECT * FROM  tableau_payment";
 
-                                                        //mysqli_query -> function kat dir liya traitment l code li 7ato $row , kaykon 3la chakl string                                     
-                                                        // okan 7ato f $query 
                                                         $query = mysqli_query($con,$result);
 
-                                                        // mysqli_fetch_array -> kat 7awal liya man string l tableau associatif  
-                                                         while($row = mysqli_fetch_array($query)) { 
+                                                    
+                                                        while($row = mysqli_fetch_array($query)) { 
+                                                    
 
                                                         //  foreach ($query as $row){
                                                         ?>
@@ -84,19 +90,19 @@ include 'connection.php';
                                                             <td> <?php echo$row['date'];?></td>
                                                             <td><i class="fal fa-eye text-info"></i></td>
                                                             </tr>
-                                                             <?php 
-                                                             }
+                                                            <?php 
+                                                            }
                                                             ?> 
 
-                                           <?php
-                                             
+                                            <?php
+                                            
                                             // include 'tableux_payment.php '
 
                                             //   $array_p = file_get_contents('tableau_payment.json');
                                             //    $payment = json_decode( $array_p,true)
-                                           ?>
+                                            ?>
 
-                                           <?php
+                                            <?php
                                         //   foreach($payment as $key){
                                         //     echo '<tr>
                                         //     <td class="text-black">'.$key['name'].'</td>

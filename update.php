@@ -34,33 +34,33 @@ include("connection.php");
                 header("location:student.php");
             // }
             
-         }
+        }
 
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <!-- CSS only -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-          
-      <link rel="stylesheet" href="style.css">
-      <title>update</title>
-  </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- CSS only -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        
+        <link rel="stylesheet" href="style.css">
+        <title>update</title>
+    </head>
 
-  <body  >
+    <body  >
 
-          <main class="d-flex flex-column justify-content-center align-items-center " 
+        <main class="d-flex flex-column justify-content-center align-items-center " 
             style="height: 100vh; background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);">
 
-          <form   method="POST" class="p-4 rounded d-flex flex-column justify-content-center" 
-                  style="width: 30rem; background: linear-gradient( #00C1FE 18.27%, #FAFFC1 91.84%);">
+            <form   method="POST" class="p-4 rounded d-flex flex-column justify-content-center" 
+                style="width: 30rem; background: linear-gradient( #00C1FE 18.27%, #FAFFC1 91.84%);">
 
-                   <input type="hidden" name="id" > 
+                <input type="hidden" name="id" > 
 
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">name</label>
@@ -69,7 +69,7 @@ include("connection.php");
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">email </label>
                     <input type="email" name="email"  class="form-control" value="<?php echo $email; ?>" id="exampleInputEmail1" aria-describedby="emailHelp" >
-                 </div>
+                </div>
                 <div class="mb-3">
                     <label for="exampleInputEmail1" class="form-label">phone</label>
                     <input type="phone" name="phone"  class="form-control" value="<?php echo $phone; ?>">
@@ -84,10 +84,10 @@ include("connection.php");
                 </div> 
 
                 <button type="submit" class="btn btn-primary" name="update">save</button>
-          </form>
+            </form>
 
-      </main>
+        </main>
 
-  </body>
+    </body>
 
 </html>

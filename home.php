@@ -1,16 +1,18 @@
+<?php
+    session_start();
+    if(empty($_SESSION['username'])){
+        header('location:sign_in.php');
+    }
+?>
 
- <?php 
-//    session_start();
-  include 'coumpteur.php';
+<?php 
 
- include 'connection.php';
+include 'coumpteur.php';
 
-//   if(isset($_SESSION['email']) && isset($_SESSION['password'])){
+include 'connection.php';
 
-   
- ?>
- 
- 
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -38,10 +40,10 @@
             <!-- asied -->
             <div class="col ">
                 <!-- nnavbar -->
-              <?php include 'navbar.php' ?>
+            <?php include 'navbar.php' ?>
                 <!-- nnavbar -->
                 <div class="d-flex flex-wrap justify-content-around gap-3">
-                   
+                
 
                     <div class="card" style="width: 14rem;background-color:#F0F9FF;">
 
@@ -50,8 +52,8 @@
                             <i class="far fa-graduation-cap h3 text-info "></i>
                             <p class="text-secondary"><?php /* echo $_SESSION['email'] */ ?>student</p>
                         
-                               <div class='float-end fw-bolder fs-3'> <?php echo $compteur_std ?> </div>
-                                                      
+                            <div class='float-end fw-bolder fs-3'> <?php echo $compteur_std ?> </div>
+                        
                         </div>
                     </div>
 
@@ -71,8 +73,8 @@
                             <p class="text-secondary">payment</p>
                             <div class="d-flex align-items-center float-end">
                                 
-                                  <p class="fw-bolder fs-3 ps-1"> <?php echo $sum;?> </p>
-                                  <h5>DHS</h5>                                  
+                                <p class="fw-bolder fs-3 ps-1"> <?php echo $sum;?> </p>
+                                <h5>DHS</h5>                                  
 
                             </div>
                         </div>

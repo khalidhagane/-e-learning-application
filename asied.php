@@ -1,5 +1,5 @@
 <?php include 'connection.php';
-session_start();
+
 ?>
 <div class="col-auto  col-md-3  col-xl-2 asied ">
                 
