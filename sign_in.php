@@ -28,8 +28,8 @@ include 'connection.php';
         </div>
         <div>
             <p class="text-center h5">SIGN IN</p>
-            <P class="text-center text-secondary">Enter your credentials to access your account</P>
-            <p class=" alert-danger  rounded"></p> 
+            <P class="text-center text-secondary m-0">Enter your credentials to access your account</P>
+             
         </div>
         <!-- affichage error -->
         <?php if(isset($_GET['error'])){ ?>
@@ -42,13 +42,13 @@ include 'connection.php';
 
         <div class= "d-flex flex-column gap-4" >
             <div >
-                <label  class="form-label">Email</label>
+                <label  class="form-label m-0">Email</label>
                 <input type="email" name="email" class="form-control"  placeholder="Enter your email" value= "<?php if(isset($_COOKIE['email'])) echo $_COOKIE['email'];?>" >   
                 
             </div>
 
             <div >
-                <label  class="form-label">Password</label>
+                <label  class="form-label m-0">Password</label>
                 <input type="password" name="password" class="form-control"  placeholder="Enter your password" value= "<?php if(isset($_COOKIE['password'])) echo $_COOKIE['password'];?>">
 
             </div>
@@ -63,7 +63,7 @@ include 'connection.php';
                 <button  type="submit" name = "submit" class="btn-info btn w-100 text-white text-decoration-none"> SIGN IN </button>
             
                 <p class=" text-secondary">Forgot your password? <a href="#" class="text-info"> Reset Password</a></p>
-                <p class=" text-secondary">vous débutez sur eclass? <a href="sign_up.php" class="text-info">s'inscrire</a></p>
+                <p class=" text-secondary m-0">vous débutez sur eclass? <a href="sign_up.php" class="text-info">s'inscrire</a></p>
             </div>
             
         </div>

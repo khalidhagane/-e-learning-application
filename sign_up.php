@@ -5,7 +5,7 @@ session_start();
 <?php
     //   connection
     include 'connection.php';
-    
+    $luka="";
     $error_pass = "";
     $error_email = "";
 
@@ -65,33 +65,34 @@ session_start();
         </div>
         <div>
             <p class="text-center h5">SIGN UP</p>
-            <P class="text-center text-secondary">Enter your credentials to access your account</P>
+            <P class="text-center text-secondary m-0">Enter your credentials to access your account</P>
             <p class=" alert-danger  rounded"></p> 
         </div>
         <!-- affichage error -->
         <?php 
-            echo "<p class=\" alert-danger  rounded\" > $error_pass $error_email </p>"
+            echo "<p class=\" alert-danger  rounded\" > $error_pass $error_email </p>";
+            
             
         ?>
 
         <div class= "d-flex flex-column gap-3" >
             <div class= "d-flex flex-column" >
                 
-                <label  class="form-label">username</label>
+                <label  class="form-label m-0">username</label>
                 <input type="text" name="username" class="form-control"  placeholder="username"  >  
             
             </div>
             <div >
-                <label  class="form-label">Email</label>
+                <label  class="form-label m-0">Email</label>
                 <input type="email" name="email" class="form-control"  placeholder="Enter your email"  >   
             </div>
 
             <div >
-                <label  class="form-label">Password</label>
+                <label  class="form-label m-0">Password</label>
                 <input type="password" name="password" class="form-control"  placeholder="Enter your password" >
             </div>
             <div >
-                <label  class="form-label">confirme password</label>
+                <label  class="form-label m-0">confirme password</label>
                 <input type="password" name="password_2" class="form-control"  placeholder="Enter your password" >
             </div>
 
@@ -99,7 +100,7 @@ session_start();
                 <button  type="submit" name = "submit_up" class="btn-info btn w-100 text-white text-decoration-none"> SIGN UP </button>
             </div>
             <div >
-            <p class=" text-secondary ">Déja inscrit(e)? <a href="sign_in.php" class="text-info"> s'identifier</a></p>
+            <p class=" text-secondary m-0">Déja inscrit(e)? <a href="sign_in.php" class="text-info"> s'identifier</a></p>
             </div>
         
         </div>
