@@ -8,6 +8,7 @@ session_start();
     $luka="";
     $error_pass = "";
     $error_email = "";
+    $error_empt ="";
 
     if(isset($_POST['submit_up'])){
         
@@ -24,6 +25,9 @@ session_start();
         }
         else if($password_2 !== $password ){
             $error_pass = "password aren't match";
+        }
+        else if(empty($username) || empty($email) || empty($password) || empty($password_2)){
+            $error_empt = "please fill all the fields";
         }
         else{
         $insert="INSERT INTO comptes (username,email,password)VALUES('$username','$email','$password')";
@@ -58,7 +62,7 @@ session_start();
 <body  >
     <main>
     <div class=" d-flex flex-row justify-content-center align-items-center min-vh-100 " style=" background: linear-gradient(110.42deg, #00C1FE 18.27%, #FAFFC1 91.84%);">
-        <form onsubmit="verifier(event)" action="sign_up.php" method="POST" class="card p-3 d-flex flex-column  "  style="width: 23rem; border-radius: 15px;">
+        <form action="sign_up.php" method="POST" id="form" class="card p-3 d-flex flex-column  "  style="width: 23rem; border-radius: 15px;">
     <div>
 
             <h1 class="border-start border-4 border-info ps-2 fs-3">E-classe</h1>
@@ -70,7 +74,7 @@ session_start();
         </div>
         <!-- affichage error -->
         <?php 
-            echo "<p class=\" alert-danger  rounded\" > $error_pass $error_email </p>";
+            echo "<p class=\" alert-danger  rounded\" > $error_pass  $error_email  $error_empt</p>";
             
             
         ?>
@@ -79,25 +83,29 @@ session_start();
             <div class= "d-flex flex-column" >
                 
                 <label  class="form-label m-0">username</label>
-                <input type="text" name="username" class="form-control"  placeholder="username"  >  
+                <input type="text" name="username" id="username" class="form-control"  placeholder="username" id="usernameError" >
+                <p class="error_message"></p>
             
             </div>
             <div >
                 <label  class="form-label m-0">Email</label>
-                <input type="email" name="email" class="form-control"  placeholder="Enter your email"  >   
+                <input type="email" name="email" id="email" class="form-control"  placeholder="Enter your email" id="emailError"   >
+                <p class="error_message"></p>   
             </div>
 
             <div >
                 <label  class="form-label m-0">Password</label>
-                <input type="password" name="password" class="form-control"  placeholder="Enter your password" >
+                <input type="password" name="password" id="pass1" class="form-control"  placeholder="Enter your password" id="passwordError"  >
+                <p class="error_message"></p>
             </div>
             <div >
                 <label  class="form-label m-0">confirme password</label>
-                <input type="password" name="password_2" class="form-control"  placeholder="Enter your password" >
+                <input type="password" name="password_2" id="pass2" class="form-control"  placeholder="Enter your password" id="passwordError" >
+                <p class="error_message"></p>
             </div>
 
             <div class="d-flex flex-column align-items-centergap-2 ">
-                <button  type="submit" name = "submit_up" class="btn-info btn w-100 text-white text-decoration-none"> SIGN UP </button>
+                <button  type="submit" name = "submit_up" id="submit_btn" class="btn-info btn w-100 text-white text-decoration-none"> SIGN UP </button>
             </div>
             <div >
             <p class=" text-secondary m-0">Déja inscrit(e)? <a href="sign_in.php" class="text-info"> s'identifier</a></p>
